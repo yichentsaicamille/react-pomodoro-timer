@@ -3,6 +3,7 @@ import Settings from './pages/Settings';
 import Timer from './pages/Timer';
 import { useState } from 'react';
 import SettingContext from './components/SettingContext';
+import MyTodoList from './pages/MyTodoList';
 
 function App() {
   const [showSettings, setShowSettings] = useState(false);
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <main>
+      <MyTodoList />
       <SettingContext.Provider
         value={{
           showSettings,

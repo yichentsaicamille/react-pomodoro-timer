@@ -1,0 +1,75 @@
+.form {
+    display: flex;
+    justify-content: center;
+  }
+  /* input */
+  .todo-input {
+    background-color: #e5e6e9;
+    border: none;
+    height: 30px;
+  }
+  .todo-button {
+    width: 45px;
+    height: 32px;
+    border: none;
+    transform: translateX(-4px);
+    background-color: #e5e6e9;
+  }
+  .todo-input:focus {
+    outline: none;
+  }
+  .fa-plus-square {
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #45568d;
+    transition: 0.3s;
+  }
+  .fa-plus-square:hover {
+    color: #7986b1;
+  }
+  /* select */
+  .filter-todo {
+    padding: 0.5rem;
+  }
+  /*CUSTOM SELECTOR */
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+    background-color: #e5e6e9;
+    margin-left: 5px;
+  }
+  /* Custom Select */
+  .select {
+    position: relative;
+    overflow: hidden;
+  }
+  select {
+    color: #45568d;
+    /* font-family: "Poppins", sans-serif; */
+    cursor: pointer;
+    width: 8rem;
+  }
+  /* Arrow */
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    transform: translate(1px, -1px);
+    top: 0;
+    right: 0;
+    padding: 0.35rem;
+    background: #45568d;
+    cursor: pointer;
+    pointer-events: none;
+  }
+  .errorMsg {
+    color: #f79a5d;
+    margin-top: 5px;
+    text-align: start;
+  }
+  
