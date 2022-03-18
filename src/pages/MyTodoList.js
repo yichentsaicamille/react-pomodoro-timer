@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Form from '../components/Form';
 import TodoList from '../components/TodoList';
+import '../App.css';
 
-function MyTodoList({ isFinished }) {
+function App({ isFinished }) {
   const [inputText, setInputText] = useState('');
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState('all');
@@ -56,6 +57,7 @@ function MyTodoList({ isFinished }) {
         inputText={inputText}
         setInputText={setInputText}
         setStatus={setStatus}
+        isFinished={isFinished}
       />
       <TodoList
         todos={todos}
@@ -66,4 +68,4 @@ function MyTodoList({ isFinished }) {
   );
 }
 
-export default MyTodoList;
+export default App;

@@ -13,7 +13,12 @@ function Form({ inputText, setInputText, todos, setTodos, setStatus }) {
     } else {
       setTodos([
         ...todos,
-        { text: inputText, completed: false, id: Math.random() * 1000 },
+        {
+          text: inputText,
+          completed: false,
+          id: Math.random() * 1000,
+          finished: false,
+        },
       ]);
       setFormError({});
     }

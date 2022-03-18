@@ -5,6 +5,7 @@ function Todo({ text, todo, todos, setTodos }) {
   const [isFinished, setIsFinished] = useState(false);
   // 刪除代辦事項
   const deleteHandler = () => {
+    alert(`確定要刪除${text}嗎?`);
     setTodos(todos.filter((item) => item.id !== todo.id));
   };
   // 將代辦事項狀態改為true
@@ -15,13 +16,14 @@ function Todo({ text, todo, todos, setTodos }) {
           return {
             ...item,
             completed: !item.completed,
+            finished: !item.finished,
           };
         }
         return item;
       })
     );
-    setIsFinished((prev) => !prev);
-    console.log(isFinished);
+    setIsFinished(todo.finished);
+    // console.log(isFinished);
   };
 
   return (
@@ -37,7 +39,7 @@ function Todo({ text, todo, todos, setTodos }) {
           <i className="fas fa-trash"></i>
         </button>
       </div>
-      {isFinished ? <FinishTime /> : ''}
+      {todo.finished ? <FinishTime /> : ''}
     </>
   );
 }
